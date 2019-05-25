@@ -44,3 +44,39 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Created by https://www.gitignore.io/api/angular
+# Edit at https://www.gitignore.io/?templates=angular
+
+### Angular ###
+## Angular ##
+# compiled output
+/movierama-web/dist
+/movierama-web/tmp
+/movierama-web/app/**/*.js
+/movierama-web/app/**/*.js.map
+
+# dependencies
+/movierama-web/node_modules
+/movierama-web/bower_components
+
+# IDEs and editors
+/.idea
+
+# misc
+/movierama-web/.sass-cache
+/movierama-web/connect.lock
+/movierama-web/coverage/*
+/movierama-web/libpeerconnection.log
+/movierama-web/npm-debug.log
+/movierama-web/testem.log
+/movierama-web/typings
+
+# e2e
+/movierama-web/e2e/*.js
+/movierama-web/e2e/*.map
+
+#System Files
+.DS_Store
+
+# End of https://www.gitignore.io/api/angular
