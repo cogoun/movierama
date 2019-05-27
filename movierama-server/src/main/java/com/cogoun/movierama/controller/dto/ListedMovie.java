@@ -15,7 +15,7 @@ public class ListedMovie extends Movie {
         ListedMovie listedMovie = new ListedMovie();
         listedMovie.setId(movie.getId());
         listedMovie.setTitle(movie.getTitle());
-        listedMovie.setDate(movie.getDate());
+        listedMovie.setDateAdded(movie.getDateAdded());
         listedMovie.setDescription(movie.getDescription());
         return listedMovie;
     }
@@ -24,7 +24,7 @@ public class ListedMovie extends Movie {
         Movie movie = new Movie();
         movie.setId(listedMovie.getId());
         movie.setTitle(listedMovie.getTitle());
-        movie.setDate(listedMovie.getDate());
+        movie.setDateAdded(listedMovie.getDateAdded());
         movie.setDescription(listedMovie.getDescription());
         return movie;
     }

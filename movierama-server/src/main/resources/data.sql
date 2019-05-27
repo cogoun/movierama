@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS movie;
 CREATE TABLE movie (
     id INT PRIMARY KEY,
     title VARCHAR(250) NOT NULL,
+    date_added TIMESTAMP NOT NULL,
     description VARCHAR(1000) NOT NULL
 );
 

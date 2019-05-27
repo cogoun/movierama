@@ -18,7 +18,7 @@ public class SubmittedMovie extends Movie {
         Movie movie = new Movie();
         movie.setId(submittedMovie.getId());
         movie.setTitle(submittedMovie.getTitle());
-        movie.setDate(submittedMovie.getDate());
+        movie.setDateAdded(submittedMovie.getDateAdded());
         movie.setDescription(submittedMovie.getDescription());
         return movie;
     }

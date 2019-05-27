@@ -9,7 +9,7 @@ export class Movie {
 
     constructor(
         public title: string,
-        public date: string,
+        public dateAdded: string,
         public description: string,
         public likes: number,
         public hates: number,

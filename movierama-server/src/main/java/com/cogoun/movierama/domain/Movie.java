@@ -1,9 +1,6 @@
 package com.cogoun.movierama.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +12,9 @@ public class Movie {
     private long id;
     private String title;
     private String description;
-    private Date date;
+
+    @Column(name = "date_added")
+    private Date dateAdded;
 
     public long getId() {
         return id;
@@ -41,12 +40,12 @@ public class Movie {
         this.description = description;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateAdded() {
+        return dateAdded;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateAdded(Date date) {
+        this.dateAdded = date;
     }
 
 }

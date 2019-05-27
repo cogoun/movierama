@@ -1,9 +1,0 @@
-com\cogoun\movierama\Application.class
-com\cogoun\movierama\controller\UserController.class
-com\cogoun\movierama\domain\User.class
-com\cogoun\movierama\domain\Movie.class
-com\cogoun\movierama\domain\MovieAction$ActionType.class
-com\cogoun\movierama\repository\UserRepository.class
-com\cogoun\movierama\domain\MovieAction.class
-com\cogoun\movierama\controller\HomeController.class
-com\cogoun\movierama\repository\MovieRepository.class

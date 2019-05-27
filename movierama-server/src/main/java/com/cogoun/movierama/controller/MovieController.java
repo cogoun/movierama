@@ -31,7 +31,7 @@ public class MovieController {
     @CrossOrigin
     @PostMapping(produces = "application/json")
     public SubmittedMovie submit(@RequestBody SubmittedMovie submittedMovie) {
-        submittedMovie.setDate(new Date());
+        submittedMovie.setDateAdded(new Date());
         Movie savedMovie = movieRepository.save(SubmittedMovie.buildMovie(submittedMovie));
         MovieAction movieAction = new MovieAction();
         movieAction.setMovieId(savedMovie.getId());

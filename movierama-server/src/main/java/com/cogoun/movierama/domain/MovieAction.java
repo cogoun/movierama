@@ -3,7 +3,7 @@ package com.cogoun.movierama.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USER_MOVIE_RELATIONSHIP")
+@Table(name = "user_movie_relationship")
 public class MovieAction {
 
     public enum ActionType {
@@ -14,8 +14,10 @@ public class MovieAction {
     @GeneratedValue
     private long id;
 
+    @Column(name = "user_id")
     private long userId;
 
+    @Column(name = "movie_id")
     private long movieId;
 
     private ActionType relation;

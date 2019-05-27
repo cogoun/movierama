@@ -44,14 +44,16 @@ export class MoviesComponent implements OnInit {
   loadMovies() {
     this.user = this.currentUserService.get('loggedInUser');
     this.movies.splice(0,this.movies.length)
-    this.movieService
-      .all(this.user.id)
-      .subscribe(allMovies => {
-        allMovies.forEach(movie => {
-          this.calculateLinkDisplay(movie);
-          this.movies.push(movie);
+    if (this.user) {
+      this.movieService
+        .all(this.user.id)
+        .subscribe(allMovies => {
+          allMovies.forEach(movie => {
+            this.calculateLinkDisplay(movie);
+            this.movies.push(movie);
+          });
         });
-      });
+    }
   }
 
   loadMoviesOfUser(submittedByUserId: string) {

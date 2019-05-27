@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: '', component: MoviesComponent },
   { path: 'newMovie', component: MovieFormComponent },
   { path: 'movies', component: MoviesComponent },
-  { path: 'movies/:postedByUserId', component: MoviesComponent },
   { path: 'login', component: UserLoginFormComponent },
   { path: 'logout', component: UserLogoutComponent },
   { path: 'subscribe', component: UserSubscribeFormComponent }
