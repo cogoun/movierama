@@ -6,7 +6,7 @@
 
     <groupId>com.cogoun.movierama</groupId>
     <artifactId>movierama</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-alpha</version>
     <packaging>pom</packaging>
 
     <parent>

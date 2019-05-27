@@ -7,7 +7,7 @@ You need to have the following installed in your machine:
 In order to build from source you have to clone this repository and execute:
 
     $ mvn clean package
-    $ java -jar movierama-server/target/movierama-server-0.0.1-SNAPSHOT.jar
+    $ java -jar movierama-server/target/movierama-server-0.0.1-alpha.jar
 
 # Information
 
