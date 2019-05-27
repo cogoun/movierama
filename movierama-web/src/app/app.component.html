@@ -1,10 +1,25 @@
-<nav class="navbar">
+<div class="movierama">
   <h1>{{title}}</h1>
-  <a class="nav-link" routerLink="/login">Login</a>
-  <a class="nav-link" routerLink="/subscribe">Sign Up</a>
-  <a class="nav-link" routerLink="/newMovie">New Movie</a>
-  <span>Welcome back: <a class="nav-link" routerLink="/movies">Guest</a></span>
-</nav>
-<router-outlet></router-outlet>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav mr-auto main-menu">
+          <li *ngIf="! loggedIn" class="nav-item active main-menu">
+              <a class="nav-link" routerLink="/login">Please Login</a>
+          </li>
+          <li *ngIf="! loggedIn" class="nav-item active main-menu">
+              <a class="nav-link" routerLink="/subscribe">Sign Up</a>
+          </li>
+          <li *ngIf="loggedIn" class="nav-item active main-menu">
+              <a class="nav-link" routerLink="/newMovie">Add a movie</a>
+          </li>
+          <li *ngIf="loggedIn" class="nav-item active main-menu">
+              <a class="nav-link" routerLink="/movies"><b>{{loggedInUserName}}</b></a>
+          </li>
+          <li *ngIf="loggedIn" class="nav-item active main-menu">
+              <a class="nav-link" routerLink="/logout">Logout</a>
+          </li>
+      </ul>
+  </nav>
 
+  <router-outlet></router-outlet>
 
+</div>

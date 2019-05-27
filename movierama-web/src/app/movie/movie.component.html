@@ -1,6 +1,15 @@
-<div class="container">
-  <h2>{{movie.title}}</h2>
-  <div class="form-group">Posted by: <a routerLink="/movies">{{movie.postedBy}}</a></div>
-  <div class="form-group">{{movie.description}}</div>
-  <div class="form-group">likes: <a routerLink="/movies">{{movie.likes}}</a> | hates: <a routerLink="/movies">{{movie.hates}}</a></div>
+<div class="movie">
+  <h3>{{movie.title}}</h3>
+  <h5>Posted by: <a (click)="onPostedByUserClick()" routerLink="">{{movie.postedByUsername}}</a> on {{movie.date  | date}}</h5>
+  <span>{{movie.description}}</span>
+  <hr/>
+  <div>
+      likes: 
+      <a *ngIf="movie.showLikeLink" (click)="likeMe()" routerLink="">{{movie.likes}}</a>
+      <span *ngIf="! movie.showLikeLink">{{movie.likes}}</span> 
+      | hates: 
+      <a *ngIf="movie.showHateLink" (click)="hateMe()" routerLink="">{{movie.hates}}</a>
+      <span *ngIf="! movie.showHateLink">{{movie.hates}}</span> 
+      <a *ngIf="movie.showRetractLink" (click)="retractVote()" routerLink=""> | Retract</a>
+  </div>
 </div>

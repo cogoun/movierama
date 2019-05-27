@@ -1,9 +1,9 @@
 .movies {
-    margin: 0 0 2em 0;
+    margin: 0 0 10px 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
-  }
+    width: 100%; 
+}
 .movies li {
     position: relative
     left 0;
