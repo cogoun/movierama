@@ -22,8 +22,10 @@ export class UserLoginFormComponent implements OnInit {
   onSubmit() {
     this.userService.login(this.model).subscribe(loggedInUser => {
       this.currentUserService.set('loggedInUser', loggedInUser);
-      this.router.navigate(['/movies']);
       this.currentUserChangedService.selectUser('');
+      this.currentUserChangedService.logInUser(loggedInUser);
+      console.log(loggedInUser);
+      this.router.navigate(['/movies']);
     });
   }
 

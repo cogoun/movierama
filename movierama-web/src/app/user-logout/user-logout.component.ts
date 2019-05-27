@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionStorageService } from 'ngx-store';
+import { CurrentUserChangedService } from '../current-user-changed.service';
 
 @Component({
   selector: 'app-user-logout',
@@ -8,13 +9,15 @@ import { SessionStorageService } from 'ngx-store';
 })
 export class UserLogoutComponent implements OnInit {
 
-  constructor(private currentUserService: SessionStorageService) { }
+  constructor(private currentUserService: SessionStorageService,
+    private currentUserChangedService: CurrentUserChangedService) { }
 
   ngOnInit() {
     this.logout();
   }
 
   logout() {
+    this.currentUserChangedService.logoutUser();
     this.currentUserService.clear('all');
   }
 }

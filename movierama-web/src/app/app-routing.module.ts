@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'login', component: UserLoginFormComponent },
   { path: 'logout', component: UserLogoutComponent },
-  { path: 'subscribe', component: UserSubscribeFormComponent }
+  { path: 'subscribe', component: UserSubscribeFormComponent },
+  { path: 'error', component: MoviesComponent }
 ];
 
 @NgModule({
