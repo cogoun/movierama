@@ -12,5 +12,5 @@ In order to build from source you have to clone this repository and execute:
 # Information
 
 The application is using Spring Boot for the backend and Angular 7 for the UI.
-H2 in memory database is used for more easier execution. Shutting down the application will result in loss of data.
+H2 in memory database is used for more user friendly setup and execution. Shutting down the application will result in loss of data.
 
